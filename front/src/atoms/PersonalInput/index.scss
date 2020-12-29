@@ -1,0 +1,14 @@
+.personal-input {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  padding: 1vh 0;
+  label {
+    align-self: flex-start;
+    padding-bottom: 0.25vh;
+  }
+  input {
+    border-radius: 5px;
+    padding: 0.5vh 0;
+  }
+}

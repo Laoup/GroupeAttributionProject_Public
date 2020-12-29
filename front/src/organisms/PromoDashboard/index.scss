@@ -1,0 +1,12 @@
+@import '../../variables.scss';
+
+.promo-dash {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-color: $blue-base;
+  border: 1px solid $blue-base;
+  border-radius: 10px;
+  padding: $traditional-block-padding;
+  width: 100%;
+}

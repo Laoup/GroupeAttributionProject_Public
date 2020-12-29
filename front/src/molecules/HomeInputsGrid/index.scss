@@ -1,0 +1,19 @@
+.inputs-grid {
+  display: flex;
+  article {
+    min-height: 100%;
+    width: 50%;
+    .personal-input {
+      margin: auto;
+    }
+    .left-button {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .register {
+      height: 75%;
+    }
+  }
+}

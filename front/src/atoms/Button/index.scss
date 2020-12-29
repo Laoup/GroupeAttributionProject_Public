@@ -1,0 +1,11 @@
+@import '../../variables.scss';
+
+.button-class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:$grey;
+  color: white;
+  padding: 1vh 1vw;
+  border-radius: 10%;
+}

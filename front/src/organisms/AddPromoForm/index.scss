@@ -1,0 +1,14 @@
+@import '../../variables.scss';
+
+.promo-form {
+  display: flex;
+  flex-direction: column;
+  background-color: $blue-base;
+  border: 1px solid $blue-base;
+  border-radius: 10px;
+  padding: $traditional-block-padding;
+  width: 30vw;
+  h3 {
+    text-align: center;
+  }
+}

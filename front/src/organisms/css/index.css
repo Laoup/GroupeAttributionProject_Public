@@ -1,0 +1,31 @@
+.notif-admin {
+    display: flex;
+    flex-direction: column;
+    background-color: #1F6F8B;
+    border: 1px solid #1F6F8B;
+    border-radius: 10px;
+    padding: 4vh 3vw;
+    width: 30vw;
+    overflow-y: scroll;
+}
+
+.notif-admin h3 {
+    text-align: center;
+    padding-bottom: 4vh;
+}
+
+.notif-admin > div > div {
+    padding-bottom: 4vh;
+    border-bottom: 1px solid white;
+    margin-bottom: 4vh;
+}
+
+.notif-admin > div > div p {
+    padding-bottom: 4vh;
+}
+
+.notif-admin > div > div:last-child {
+    margin-bottom: 0;
+}
+
+/*# sourceMappingURL=index.css.map */

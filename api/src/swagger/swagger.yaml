@@ -1,0 +1,149 @@
+swagger: '2.0'
+info:
+  description: 'This is the API documentation of my GroupAssignment project. Here you can find all the description of existing routes on the API. Have a good reading ;)'
+  version: '1.0.0'
+  title: GroupAssignment API
+  contact:
+    email: alban.meurice@hotmail.fr
+host: localhost:8000
+basePath: /
+tags:
+  - name: Sign
+    description: Sign-in & Sign-up routes
+  - name: Token
+    description: Routes for JWT handling
+  - name: Admin
+    description: Routes availaibles for user sign as admin
+schemes:
+  - http
+paths:
+  /sign-up:
+    post:
+      tags:
+        - Sign
+      summary: Register a new user in the database
+      description: ''
+      operationId: SignUpUser
+      consumes:
+        - application/json
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Informations required for register a new user
+          required: true
+          schema:
+            $ref: '#/definitions/User'
+      responses:
+        '200':
+          description: Success
+        '422':
+          description: UnprocessableEntity
+  /sign-in:
+    post:
+      tags:
+        - Sign
+      summary: Authenticate a user in the database
+      description: 'If the user exist and the email / password is ok. Return a JsonWebToken'
+      operationId: SignInUser
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Informations required for authenticate a user if he exist
+          required: true
+          schema:
+            type: object
+            properties:
+              email:
+                type: string
+              password:
+                type: string
+      responses:
+        '200':
+          description: Success
+        '401':
+          description: Unauthorized
+        '422':
+          description: UnprocessableEntity
+  /token-refresh:
+    get:
+      tags:
+        - Token
+      summary: Get a refresh-token and if valid send a new access-token
+      description: This routes is called when the client received a error 401 and then try to refresh the access token with the refresh token.
+      operationId: RefreshToken
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successful operation
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+  /admin/add-promo:
+    post:
+      tags:
+        - Admin
+      summary: Add a new promotion.
+      description: 'Let the admin create a new promotion.'
+      operationId: AddPromo
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Informations required for create a new promotion
+          required: true
+          schema:
+            type: object
+            properties:
+                name:
+                  type: string
+                is_active:
+                  type: boolean
+      responses:
+        '200':
+          description: success
+        '400':
+          description: Bad Request
+  /admin/get-promos:
+    get:
+      tags:
+        - Admin
+      summary: Get all existing promos
+      description: Returns all the promos who exist if you are admin
+      operationId: getPromos
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: success
+        '403':
+          description: Forbidden
+definitions:
+  User:
+    type: object
+    properties:
+      first_name:
+        type: string
+      last_name:
+        type: string
+      email:
+        type: string
+      password:
+        type: string
+      promo:
+        type: string
+      github:
+        type: string
+    xml:
+      name: User

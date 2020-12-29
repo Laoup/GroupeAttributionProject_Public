@@ -1,0 +1,11 @@
+@import '../../variables.scss';
+
+.home-template-main {
+  background-color: $dark-base;
+  display: flex;
+  height: -webkit-fill-available;
+  padding: $traditional-height-padding 0;
+  form {
+    margin: auto;
+  }
+}

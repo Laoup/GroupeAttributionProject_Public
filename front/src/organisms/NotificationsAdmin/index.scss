@@ -1,0 +1,29 @@
+@import '../../variables.scss';
+
+.notif-admin {
+  display: flex;
+  flex-direction: column;
+  background-color: #1F6F8B;
+  border: 1px solid #1F6F8B;
+  border-radius: 10px;
+  padding: 4vh 3vw;
+  width: 30vw;
+  overflow-y: scroll;
+  h3 {
+    text-align: center;
+    padding-bottom: $traditional-height-padding;
+  }
+  > div {
+    > div {
+      padding-bottom: $traditional-height-padding;
+      border-bottom: 1px solid white;
+      margin-bottom: $traditional-height-padding;
+      p {
+        padding-bottom: $traditional-height-padding;
+      }
+    }
+    > div:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import '../../variables.scss';
+
+.admin-template-main {
+  background-color:  $dark-base;
+  color: white;
+  display: flex;
+  height: auto;
+  //min-height: -webkit-fill-available;
+  flex-direction: column;
+  align-items: center;
+  .first-level {
+    width: $width-content;
+    margin: $margin-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $traditional-height-padding 0;
+    max-height: 35vh;
+  }
+  .second-level {
+    width: $width-content;
+    margin: $margin-content;
+    display: flex;
+    justify-content: center;
+  }
+}

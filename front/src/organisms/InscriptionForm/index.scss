@@ -1,0 +1,11 @@
+@import '../../variables.scss';
+
+.my_form {
+  background-color: $blue-base;
+  width: 75vw;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: white;
+  padding: 5vh 0;
+  text-align: center;
+}

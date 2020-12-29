@@ -1,0 +1,21 @@
+@import '../../variables.scss';
+
+.promo-inputs-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > div:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding-bottom: $traditional-height-padding;
+    .personal-input {
+      width: auto;
+    }
+    .personal-input:last-child {
+      align-items: center;
+    }
+  }
+}

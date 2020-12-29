@@ -1,0 +1,18 @@
+@import '../../variables.scss';
+
+.custom-col-transform {
+  width: 15%;
+  border-right: 1px solid white;
+  h4 {
+    padding: 0 2vw;
+    border-bottom: 1px solid white;
+    text-align: center;
+    margin-bottom: 3vh;
+  }
+  div {
+    text-align: center;
+    p {
+      height: 40px;
+    }
+  }
+}
